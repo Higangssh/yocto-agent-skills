@@ -1,9 +1,9 @@
 ---
-name: yocto-agent
-description: Official-doc-first Yocto Project and BitBake assistance for creating or reviewing recipes, layers, images, machine/distro config, bbappends, build logs, QA errors, fetch/patch/package/rootfs failures, and modern BitBake override syntax. Use when working with Yocto/OpenEmbedded files such as .bb, .bbappend, .bbclass, layer.conf, local.conf, bblayers.conf, machine config, distro config, image recipes, kernel recipes, or BitBake command output.
+name: yocto-agent-skills
+description: Official-doc-first Yocto Project and BitBake agent skills for creating or reviewing recipes, layers, images, machine/distro config, bbappends, build logs, QA errors, fetch/patch/package/rootfs failures, and modern BitBake override syntax. Use when working with Yocto/OpenEmbedded files such as .bb, .bbappend, .bbclass, layer.conf, local.conf, bblayers.conf, machine config, distro config, image recipes, kernel recipes, or BitBake command output.
 ---
 
-# Yocto Agent
+# Yocto Agent Skills
 
 Use this skill to keep Yocto Project help grounded in current official documentation, real BitBake metadata, and build logs. Treat Yocto as release-sensitive: syntax, variables, classes, supported hosts, and QA checks can change by release.
 
