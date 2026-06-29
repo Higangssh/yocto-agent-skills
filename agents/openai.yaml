@@ -1,3 +1,3 @@
 display_name: Yocto Agent Skills
-short_description: Official-doc-first Yocto and BitBake help.
-default_prompt: Use these skills to debug a Yocto/BitBake build issue, write or review a recipe, modernize override syntax, or review a layer/image/BSP change.
+short_description: Official-doc-first Yocto and BitBake skills.
+default_prompt: Use these skills to route Yocto docs, debug BitBake failures, review recipes, or review layers.

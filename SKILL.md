@@ -5,12 +5,19 @@ description: Official-doc-first Yocto Project and BitBake agent skills for creat
 
 # Yocto Agent Skills
 
-Use this skill to keep Yocto Project help grounded in current official documentation, real BitBake metadata, and build logs. Treat Yocto as release-sensitive: syntax, variables, classes, supported hosts, and QA checks can change by release.
+Use this root skill as a compatibility router when the full `yocto-agent-skills` repository is installed as one skill. Prefer the focused skills in `skills/` when the host supports skill collections:
+
+- `skills/yocto-doc-router` for release-aware official documentation routing.
+- `skills/bitbake-debug` for task, log, package, rootfs, and build failure debugging.
+- `skills/yocto-recipe-review` for `.bb`, `.bbappend`, `.bbclass`, dependency, packaging, and override syntax review.
+- `skills/yocto-layer-review` for `layer.conf`, layer compatibility, priority, dependencies, and bbappend matching.
+
+Keep Yocto Project help grounded in current official documentation, real BitBake metadata, and build logs. Treat Yocto as release-sensitive: syntax, variables, classes, supported hosts, and QA checks can change by release.
 
 ## Ground Rules
 
 1. Identify the user's Yocto release or branch first. If unknown, inspect `LAYERSERIES_COMPAT`, `conf/layer.conf`, `poky` branch, `oe-core` branch, or the build output. If still unknown, state the assumption and prefer current docs.
-2. Prefer official docs and local metadata over memory. Use [references/official-doc-map.md](references/official-doc-map.md) to route questions to the right manual before giving precise guidance.
+2. Prefer official docs and local metadata over memory. Use [references/shared/official-doc-map.md](references/shared/official-doc-map.md) to route questions to the right manual before giving precise guidance.
 3. Ask for or inspect the smallest useful evidence: the failing task, the first fatal error, the relevant recipe or bbappend, `conf/bblayers.conf`, `conf/local.conf`, and `tmp/work/.../temp/log.do_*`.
 4. Do not present generic Linux fixes as Yocto fixes until you map them to BitBake variables, tasks, classes, packages, or layer configuration.
 5. Prefer modern override style (`VAR:override`, `:append`, `:prepend`, `:remove`) unless the target release requires old syntax.
@@ -84,8 +91,9 @@ When reviewing a Yocto patch, produce findings first:
 
 ### 5. Use References
 
-- For official documentation routing, read [references/official-doc-map.md](references/official-doc-map.md).
-- For compact domain guidance, task debugging, metadata syntax, variables, QA checks, and review checklists, read [references/yocto-field-guide.md](references/yocto-field-guide.md).
+- For official documentation routing, read [references/shared/official-doc-map.md](references/shared/official-doc-map.md).
+- For compact domain guidance, task debugging, metadata syntax, variables, QA checks, and review checklists, read [references/shared/yocto-field-guide.md](references/shared/yocto-field-guide.md).
+- For deeper starter references, read `references/bitbake/variables-core.md`, `references/bitbake/classes-core.md`, `references/yocto/qa-errors.md`, and `references/yocto/migration.md` as needed.
 
 ## Output Style
 
