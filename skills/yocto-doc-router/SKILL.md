@@ -26,6 +26,7 @@ Use this skill to route Yocto and BitBake questions to the correct official docu
 - Recipes: Development Tasks Manual > Writing a New Recipe, Reference Manual Tasks and Classes.
 - BSP/kernel: BSP Guide, Kernel Development Manual, relevant class and variable entries.
 - Security/SBOM/CVE/license: Security Manual, Security Reference, Reference Manual classes and variables.
+- Image/rootfs: Development Tasks Manual image customization, package management, and Reference Manual image/rootfs tasks.
 
 ## Output
 
@@ -34,4 +35,4 @@ Answer with:
 1. assumed or detected release
 2. official manual section to check
 3. local file/log/command that confirms the issue
-4. next focused skill to use, if any
+4. next focused skill to use, if any: `bitbake-debug`, `yocto-recipe-review`, `yocto-layer-review`, `yocto-image-rootfs`, `yocto-bsp-kernel`, or `yocto-security-sbom`

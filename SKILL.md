@@ -11,6 +11,9 @@ Use this root skill as a compatibility router when the full `yocto-agent-skills`
 - `skills/bitbake-debug` for task, log, package, rootfs, and build failure debugging.
 - `skills/yocto-recipe-review` for `.bb`, `.bbappend`, `.bbclass`, dependency, packaging, and override syntax review.
 - `skills/yocto-layer-review` for `layer.conf`, layer compatibility, priority, dependencies, and bbappend matching.
+- `skills/yocto-image-rootfs` for image recipes, package selection, `do_rootfs`, pkgdata, and package manager failures.
+- `skills/yocto-bsp-kernel` for machine, BSP, kernel provider, devicetree, U-Boot, and deploy artifacts.
+- `skills/yocto-security-sbom` for license, CVE, SPDX/SBOM, archiver, and compliance workflows.
 
 Keep Yocto Project help grounded in current official documentation, real BitBake metadata, and build logs. Treat Yocto as release-sensitive: syntax, variables, classes, supported hosts, and QA checks can change by release.
 
@@ -94,6 +97,7 @@ When reviewing a Yocto patch, produce findings first:
 - For official documentation routing, read [references/shared/official-doc-map.md](references/shared/official-doc-map.md).
 - For compact domain guidance, task debugging, metadata syntax, variables, QA checks, and review checklists, read [references/shared/yocto-field-guide.md](references/shared/yocto-field-guide.md).
 - For deeper starter references, read `references/bitbake/variables-core.md`, `references/bitbake/classes-core.md`, `references/yocto/qa-errors.md`, and `references/yocto/migration.md` as needed.
+- For image/rootfs, BSP/kernel, security/SBOM, and task catalog work, read `references/yocto/image-rootfs.md`, `references/yocto/bsp-kernel.md`, `references/yocto/security-sbom.md`, and `references/bitbake/tasks-reference.md`.
 
 ## Output Style
 
