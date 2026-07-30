@@ -48,9 +48,9 @@ bitbake -c savedefconfig virtual/kernel
 
 ## References
 
-- Read [../../references/yocto/bsp-kernel.md](../../references/yocto/bsp-kernel.md).
-- Read [../../references/bitbake/classes-core.md](../../references/bitbake/classes-core.md) for kernel and U-Boot classes.
-- Read [../../references/yocto/migration.md](../../references/yocto/migration.md) for release compatibility risks.
+- Read [references/bsp-kernel.md](references/bsp-kernel.md).
+- Read [references/classes-core.md](references/classes-core.md) for kernel and U-Boot classes.
+- Read [references/migration.md](references/migration.md) for release compatibility risks.
 
 ## Output
 

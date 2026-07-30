@@ -42,9 +42,9 @@ oe-pkgdata-util find-path '*/usr/bin/<tool>'
 
 ## References
 
-- Read [../../references/yocto/image-rootfs.md](../../references/yocto/image-rootfs.md).
-- Read [../../references/bitbake/variables-core.md](../../references/bitbake/variables-core.md) for `IMAGE_INSTALL`, `IMAGE_FEATURES`, and package variables.
-- Read [../../references/bitbake/tasks-reference.md](../../references/bitbake/tasks-reference.md) for `do_rootfs`, `do_image`, and package tasks.
+- Read [references/image-rootfs.md](references/image-rootfs.md).
+- Read [references/variables-core.md](references/variables-core.md) for `IMAGE_INSTALL`, `IMAGE_FEATURES`, and package variables.
+- Read [references/tasks-reference.md](references/tasks-reference.md) for `do_rootfs`, `do_image`, and package tasks.
 
 ## Output
 

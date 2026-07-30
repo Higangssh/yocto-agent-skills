@@ -62,10 +62,10 @@ Avoid `_append`, `_prepend`, `_remove`, and old package override syntax unless t
 
 ## References
 
-- Read [../../references/bitbake/variables-core.md](../../references/bitbake/variables-core.md) for variable semantics.
-- Read [../../references/bitbake/classes-core.md](../../references/bitbake/classes-core.md) for class-specific review.
-- Read [../../references/yocto/qa-errors.md](../../references/yocto/qa-errors.md) for package QA risks.
-- Use [../../references/shared/official-doc-map.md](../../references/shared/official-doc-map.md) to route official docs.
+- Read [references/variables-core.md](references/variables-core.md) for variable semantics.
+- Read [references/classes-core.md](references/classes-core.md) for class-specific review.
+- Read [references/qa-errors.md](references/qa-errors.md) for package QA risks.
+- Use [references/official-doc-map.md](references/official-doc-map.md) to route official docs.
 
 ## Output
 

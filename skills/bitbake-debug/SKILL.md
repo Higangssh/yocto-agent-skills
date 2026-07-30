@@ -49,9 +49,9 @@ oe-pkgdata-util find-path '*/path/or/file'
 
 ## References
 
-- Read [../../references/shared/yocto-field-guide.md](../../references/shared/yocto-field-guide.md) for the broader task playbook.
-- Read [../../references/yocto/qa-errors.md](../../references/yocto/qa-errors.md) for common QA failures.
-- Read [../../references/bitbake/variables-core.md](../../references/bitbake/variables-core.md) when the fix depends on variable semantics.
+- Read [references/yocto-field-guide.md](references/yocto-field-guide.md) for the broader task playbook.
+- Read [references/qa-errors.md](references/qa-errors.md) for common QA failures.
+- Read [references/variables-core.md](references/variables-core.md) when the fix depends on variable semantics.
 
 ## Output
 

@@ -42,9 +42,9 @@ find tmp/deploy -maxdepth 4 -iname '*spdx*' -o -path '*licenses*'
 
 ## References
 
-- Read [../../references/yocto/security-sbom.md](../../references/yocto/security-sbom.md).
-- Read [../../references/bitbake/classes-core.md](../../references/bitbake/classes-core.md) for `license`, `archiver`, `create-spdx`, and release-sensitive security classes.
-- Read [../../references/yocto/migration.md](../../references/yocto/migration.md) for SBOM/CVE release changes.
+- Read [references/security-sbom.md](references/security-sbom.md).
+- Read [references/classes-core.md](references/classes-core.md) for `license`, `archiver`, `create-spdx`, and release-sensitive security classes.
+- Read [references/migration.md](references/migration.md) for SBOM/CVE release changes.
 
 ## Output
 

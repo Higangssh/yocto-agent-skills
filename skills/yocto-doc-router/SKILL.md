@@ -11,17 +11,17 @@ Use this skill to route Yocto and BitBake questions to the correct official docu
 
 1. Identify the release or branch: inspect `LAYERSERIES_COMPAT_*`, `conf/layer.conf`, Poky/OE-Core branch names, build output, or vendor layer documentation.
 2. If the release is unknown, state the assumption and prefer current official docs.
-3. Read [../../references/shared/official-doc-map.md](../../references/shared/official-doc-map.md) to route by problem type.
-4. For release changes, read [../../references/yocto/migration.md](../../references/yocto/migration.md).
+3. Read [references/official-doc-map.md](references/official-doc-map.md) to route by problem type.
+4. For release changes, read [references/migration.md](references/migration.md).
 5. Return the smallest useful doc path, the reason it matters, and the evidence needed from the user's tree.
 
 ## Routing Rules
 
 - New build setup: Quick Build, Development Tasks Manual, source directory structure, supported host distro.
 - Syntax and overrides: BitBake User Manual > Syntax and Operators, Conditional Syntax, Functions, Tasks.
-- Variables: Reference Manual Variables Glossary plus [../../references/bitbake/variables-core.md](../../references/bitbake/variables-core.md).
-- Classes: Reference Manual Classes plus [../../references/bitbake/classes-core.md](../../references/bitbake/classes-core.md).
-- QA errors: Reference Manual QA messages plus [../../references/yocto/qa-errors.md](../../references/yocto/qa-errors.md).
+- Variables: Reference Manual Variables Glossary plus [references/variables-core.md](references/variables-core.md).
+- Classes: Reference Manual Classes plus [references/classes-core.md](references/classes-core.md).
+- QA errors: Reference Manual QA messages plus [references/qa-errors.md](references/qa-errors.md).
 - Layers: Development Tasks Manual > Layers, BitBake concepts for layers and appends.
 - Recipes: Development Tasks Manual > Writing a New Recipe, Reference Manual Tasks and Classes.
 - BSP/kernel: BSP Guide, Kernel Development Manual, relevant class and variable entries.

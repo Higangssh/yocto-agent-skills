@@ -55,9 +55,9 @@ Check:
 
 ## References
 
-- Read [../../references/shared/official-doc-map.md](../../references/shared/official-doc-map.md) for official layer docs.
-- Read [../../references/shared/yocto-field-guide.md](../../references/shared/yocto-field-guide.md) for layer and provider basics.
-- Read [../../references/yocto/migration.md](../../references/yocto/migration.md) for release compatibility checks.
+- Read [references/official-doc-map.md](references/official-doc-map.md) for official layer docs.
+- Read [references/yocto-field-guide.md](references/yocto-field-guide.md) for layer and provider basics.
+- Read [references/migration.md](references/migration.md) for release compatibility checks.
 
 ## Output
 
