@@ -1,0 +1,31 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Frontmatter, link resolution, reference drift, README catalogs,
+      # plugin manifests, and the public-repo disclosure scan.
+      - name: Validate skills
+        run: python tools/validate_skills.py
+
+      # The generated copies under skills/*/references/ must be reproducible from
+      # the sources in references/. Regenerating them may not change anything.
+      - name: Check generated references are reproducible
+        run: |
+          python tools/sync_references.py
+          git diff --exit-code

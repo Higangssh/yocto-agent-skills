@@ -1,0 +1,4 @@
+# Normalize text to LF everywhere. tools/sync_references.py writes LF, so without
+# this a contributor on a platform that checks out CRLF would see the generated
+# reference copies as permanently modified.
+* text=auto eol=lf

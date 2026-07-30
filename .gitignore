@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Personal project instructions, never shared (see .claude/CLAUDE.md)
+CLAUDE.local.md
+.claude/settings.local.json
