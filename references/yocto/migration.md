@@ -3,6 +3,32 @@
 Use this reference when a fix may depend on Yocto release series. Always verify exact changes in the official migration guide for the source and target releases:
 https://docs.yoctoproject.org/migration-guides/
 
+## Current Release Landscape
+
+Verify this against https://docs.yoctoproject.org/releases.html before relying on it;
+Yocto releases every April and October, and non-LTS series reach EOL in about seven months.
+
+As of July 2026:
+
+| Series | Version | Status |
+| --- | --- | --- |
+| `blacksail` | 6.1 | in development, targeting October 2026 |
+| `wrynose` | 6.0 | LTS until April 2030 |
+| `whinlatter` | 5.3 | EOL |
+| `walnascar` | 5.2 | EOL |
+| `styhead` | 5.1 | EOL |
+| `scarthgap` | 5.0 | LTS until April 2028 |
+| `kirkstone` | 4.0 | EOL |
+
+Two things agents get wrong here:
+
+- **Version numbers are not sequential across LTS boundaries.** Since `kirkstone`, every
+  second April brings an LTS with a major version bump: 4.0 `kirkstone`, 5.0 `scarthgap`,
+  6.0 `wrynose`. There is no 5.4; `whinlatter` (5.3) is followed by `wrynose` (6.0).
+- **Most production fleets run an LTS.** An upgrade question is usually LTS-to-LTS, such as
+  `scarthgap` to `wrynose`, and skips the intermediate non-LTS series entirely. Read the
+  migration guide for every series in between, because the changes still apply.
+
 ## Release-Aware Checks
 
 1. Identify source release, target release, and vendor fork if present.

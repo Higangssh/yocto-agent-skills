@@ -30,7 +30,7 @@ BBFILES += "${LAYERDIR}/recipes-*/*/*.bb ${LAYERDIR}/recipes-*/*/*.bbappend"
 BBFILE_COLLECTIONS += "mylayer"
 BBFILE_PATTERN_mylayer = "^${LAYERDIR}/"
 BBFILE_PRIORITY_mylayer = "6"
-LAYERSERIES_COMPAT_mylayer = "scarthgap walnascar"
+LAYERSERIES_COMPAT_mylayer = "scarthgap wrynose"
 LAYERDEPENDS_mylayer = "core"
 ```
 

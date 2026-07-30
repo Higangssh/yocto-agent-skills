@@ -174,7 +174,16 @@ Check:
 
 ## Release Awareness Checklist
 
-- Confirm branch or release: `kirkstone`, `langdale`, `mickledore`, `nanbield`, `scarthgap`, `styhead`, `walnascar`, `next`, or vendor fork.
+- Confirm the branch or release before giving version-specific advice. Read `LAYERSERIES_COMPAT`, the `poky` or `oe-core` branch, or `bitbake -e`.
+- Yocto releases twice a year and non-LTS series go EOL in about seven months, so treat the list below as dated and confirm against https://docs.yoctoproject.org/releases.html.
+
+  As of July 2026:
+
+  - Supported: `wrynose` (6.0, LTS until April 2030), `scarthgap` (5.0, LTS until April 2028).
+  - In development: `blacksail` (6.1), targeting October 2026.
+  - EOL but still common in the field: `whinlatter` (5.3), `walnascar` (5.2), `styhead` (5.1), `nanbield` (4.3), `mickledore` (4.2), `langdale` (4.1), `kirkstone` (4.0).
+
+- If the user is on an EOL series, say so plainly, then answer for the release they actually run rather than pushing an upgrade they did not ask for.
 - Match docs to that release when possible.
 - Check migration guides before changing override syntax, class names, Python version assumptions, host distro support, or security/SBOM tooling.
 - Be careful with vendor BSP layers: they may lag OE-Core syntax or pin old branches.
