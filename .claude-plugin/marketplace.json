@@ -1,0 +1,29 @@
+{
+  "name": "yocto-skills",
+  "description": "Official-doc-first Yocto Project, OpenEmbedded, and BitBake skills for AI coding agents.",
+  "owner": {
+    "name": "Higangssh",
+    "url": "https://github.com/Higangssh"
+  },
+  "plugins": [
+    {
+      "name": "yocto-agent-skills",
+      "source": "./",
+      "displayName": "Yocto Agent Skills",
+      "description": "Official-doc-first Yocto Project and BitBake skills: route to current documentation, debug BitBake build failures, and review recipes, layers, images, BSP/kernel metadata, and security/SBOM workflows.",
+      "homepage": "https://github.com/Higangssh/yocto-agent-skills",
+      "repository": "https://github.com/Higangssh/yocto-agent-skills",
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "yocto",
+        "bitbake",
+        "openembedded",
+        "embedded-linux",
+        "bsp",
+        "recipe",
+        "sbom"
+      ]
+    }
+  ]
+}

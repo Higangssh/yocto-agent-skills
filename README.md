@@ -28,7 +28,28 @@ The root `SKILL.md` remains as a compatibility router for hosts that install a r
 
 ## Installation
 
-For collection-aware agents, install the individual folders under `skills/`.
+Every skill folder is self-contained: it carries the references it links to, so a skill
+keeps working when installed on its own.
+
+### Claude Code
+
+The repository is also a Claude Code plugin. Add the marketplace and install:
+
+```bash
+/plugin marketplace add Higangssh/yocto-agent-skills
+/plugin install yocto-agent-skills@yocto-skills
+```
+
+All seven skills load as `/yocto-agent-skills:<skill>`, and Claude invokes them
+automatically when a task matches. To try them without installing:
+
+```bash
+claude --plugin-dir /path/to/yocto-agent-skills
+```
+
+### Codex and other collection-aware agents
+
+Install the individual folders under `skills/`.
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
@@ -74,6 +95,10 @@ Use yocto-security-sbom to review this license checksum and SBOM setup.
 
 - `SKILL.md`: root compatibility router
 - `skills/*/SKILL.md`: focused installable skills
+- `skills/*/references/`: generated per-skill copies that make each skill self-contained
+- `.claude-plugin/`: Claude Code plugin and marketplace manifests
+- `tools/sync_references.py`: regenerates the per-skill reference copies
+- `tools/validate_skills.py`: validates frontmatter, links, drift, and public-repo disclosure
 - `references/shared/official-doc-map.md`: official Yocto/BitBake documentation routing by problem type
 - `references/shared/yocto-field-guide.md`: compact field guide for recipes, layers, tasks, QA, images, providers, and BSP/kernel work
 - `references/bitbake/variables-core.md`: variables agents often confuse

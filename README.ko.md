@@ -28,7 +28,28 @@ root `SKILL.md`는 repo 전체를 하나의 skill로 설치하는 host를 위한
 
 ## 설치
 
-collection-aware agent에서는 `skills/` 아래의 개별 skill 폴더를 설치하는 방식을 권장합니다.
+각 skill 폴더는 self-contained입니다. 참조하는 reference를 폴더 안에 함께 가지고 있어서
+폴더 하나만 설치해도 그대로 동작합니다.
+
+### Claude Code
+
+이 repo는 Claude Code plugin이기도 합니다. marketplace를 추가한 뒤 설치합니다.
+
+```bash
+/plugin marketplace add Higangssh/yocto-agent-skills
+/plugin install yocto-agent-skills@yocto-skills
+```
+
+7개 skill이 `/yocto-agent-skills:<skill>` 형태로 등록되고, 작업 내용이 맞으면 Claude가
+자동으로 호출합니다. 설치 없이 시험해 보려면:
+
+```bash
+claude --plugin-dir /path/to/yocto-agent-skills
+```
+
+### Codex 및 collection-aware agent
+
+`skills/` 아래의 개별 skill 폴더를 설치합니다.
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
@@ -74,6 +95,10 @@ Use yocto-security-sbom to review this license checksum and SBOM setup.
 
 - `SKILL.md`: root 호환 router
 - `skills/*/SKILL.md`: focused installable skills
+- `skills/*/references/`: 각 skill을 self-contained로 만드는 자동 생성 reference 사본
+- `.claude-plugin/`: Claude Code plugin 및 marketplace manifest
+- `tools/sync_references.py`: skill별 reference 사본 재생성
+- `tools/validate_skills.py`: frontmatter, link, drift, 공개 레포 정보노출 검증
 - `references/shared/official-doc-map.md`: 문제 유형별 공식 Yocto/BitBake 문서 라우팅
 - `references/shared/yocto-field-guide.md`: recipe, layer, task, QA, image, provider, BSP/kernel 작업용 압축 가이드
 - `references/bitbake/variables-core.md`: agent가 자주 헷갈리는 핵심 변수
