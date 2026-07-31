@@ -110,7 +110,8 @@ Use yocto-security-sbom to review this license checksum and SBOM setup.
 - `references/yocto/bsp-kernel.md`: BSP/kernel 문제 해결
 - `references/yocto/security-sbom.md`: security, license, CVE, SBOM 흐름
 - `examples/`: 현실적인 실패 예시와 기대 답변 패턴
-- `evals/prompts.md`: 수동 forward-test 프롬프트
+- `evals/prompts.md`: 통과 기준이 붙은 수동 forward-test 프롬프트
+- `evals/cases/`: `claude plugin eval`용 eval case와 grader
 - `agents/openai.yaml`: 호환 skill host용 UI metadata
 
 ## 라이선스
