@@ -1,5 +1,7 @@
 # Yocto Agent Skills
 
+[![validate](https://github.com/Higangssh/yocto-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/Higangssh/yocto-agent-skills/actions/workflows/validate.yml)
+
 Official-doc-first Yocto Project and BitBake skills for AI coding agents.
 
 Yocto is release-sensitive, deeply configurable, and easy for general LLMs to hallucinate. This repository gives agents focused skills for routing to official documentation, debugging BitBake failures, reviewing recipes, reviewing layers, diagnosing image/rootfs problems, working through BSP/kernel issues, and handling security/SBOM workflows.
@@ -68,6 +70,10 @@ ln -s "$(pwd)" "${CODEX_HOME:-$HOME/.codex}/skills/yocto-agent-skills"
 ## Example Prompts
 
 ```text
+Use yocto-doc-router to find the current docs for this QA check on my release.
+```
+
+```text
 Use bitbake-debug to diagnose this do_rootfs failure.
 ```
 
@@ -113,6 +119,23 @@ Use yocto-security-sbom to review this license checksum and SBOM setup.
 - `evals/prompts.md`: manual forward-test prompts with pass criteria
 - `evals/cases/`: eval cases and graders for `claude plugin eval`
 - `agents/openai.yaml`: UI metadata for compatible skill hosts
+- `.claude/CLAUDE.md`: project rules, including the security rules for this public repository
+- `.github/workflows/validate.yml`: CI that runs the validator on every push and pull request
+
+## Development
+
+References under `references/` are the source of truth. The copies under
+`skills/*/references/` are generated, so edit the source and re-run the sync script.
+
+```bash
+python tools/sync_references.py     # regenerate the per-skill reference copies
+python tools/validate_skills.py     # frontmatter, links, drift, disclosure scan
+claude plugin validate . --strict   # Claude Code plugin manifest
+```
+
+This is a public repository, so the validator also scans for email addresses, real
+usernames, absolute local paths, and credential patterns. See
+[CONTRIBUTING.md](CONTRIBUTING.md) and [.claude/CLAUDE.md](.claude/CLAUDE.md).
 
 ## License
 

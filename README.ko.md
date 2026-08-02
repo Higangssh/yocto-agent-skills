@@ -1,5 +1,7 @@
 # Yocto Agent Skills
 
+[![validate](https://github.com/Higangssh/yocto-agent-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/Higangssh/yocto-agent-skills/actions/workflows/validate.yml)
+
 공식 문서 우선 방식의 Yocto Project / BitBake 전용 AI agent skills입니다.
 
 Yocto는 릴리즈별 차이가 크고 설정 계층이 깊어서 일반 LLM이 쉽게 틀립니다. 이 저장소는 agent가 공식 문서를 올바르게 찾고, BitBake 실패를 디버깅하고, recipe와 layer를 리뷰하고, image/rootfs, BSP/kernel, security/SBOM 문제까지 다루도록 돕는 focused skills를 제공합니다.
@@ -68,6 +70,10 @@ ln -s "$(pwd)" "${CODEX_HOME:-$HOME/.codex}/skills/yocto-agent-skills"
 ## 예시 프롬프트
 
 ```text
+Use yocto-doc-router to find the current docs for this QA check on my release.
+```
+
+```text
 Use bitbake-debug to diagnose this do_rootfs failure.
 ```
 
@@ -113,6 +119,23 @@ Use yocto-security-sbom to review this license checksum and SBOM setup.
 - `evals/prompts.md`: 통과 기준이 붙은 수동 forward-test 프롬프트
 - `evals/cases/`: `claude plugin eval`용 eval case와 grader
 - `agents/openai.yaml`: 호환 skill host용 UI metadata
+- `.claude/CLAUDE.md`: 프로젝트 규칙 (공개 레포 보안 규칙 포함)
+- `.github/workflows/validate.yml`: push/PR마다 validator를 실행하는 CI
+
+## 개발
+
+`references/` 아래가 정본입니다. `skills/*/references/`는 생성물이므로, 정본을 고친 뒤
+sync 스크립트를 다시 실행하세요.
+
+```bash
+python tools/sync_references.py     # skill별 reference 사본 재생성
+python tools/validate_skills.py     # frontmatter, link, drift, 정보노출 검사
+claude plugin validate . --strict   # Claude Code plugin manifest
+```
+
+공개 레포이므로 validator가 이메일, 실제 사용자명, 절대 로컬 경로, 자격증명 패턴도
+함께 검사합니다. [CONTRIBUTING.md](CONTRIBUTING.md)와
+[.claude/CLAUDE.md](.claude/CLAUDE.md)를 참고하세요.
 
 ## 라이선스
 
